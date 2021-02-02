@@ -12,15 +12,15 @@ union Friend{
     char arr[4];
 };
 
-// enum Weekday{
-//     Tues = 100,
-//     Wed,
-//     Thrus,
-//     Fri = 1000,
-//     Sat,
-//     Sun,
-//     Mon
-// };
+enum Weekday{
+    Tues,
+    Wed,
+    Thrus,
+    Fri = 100,
+    Sat,
+    Sun = 50,
+    Mon
+};
 
 // int Mon = 0;
 // int Tues = 1;
@@ -45,12 +45,8 @@ int main(){
     union Friend f;
     f.num = 2;
     f.c = 'a';
-    f.arr[0] = 'g';
-    f.arr[1] = 'b';
-    f.arr[2] = 'c';
-    f.arr[3] = 'd';
 
-    cout<<f.num<<" "<<f.c<<" "<<f.arr[2]<<endl;
+    cout<<f.num<<" "<<f.c<<" "<<endl;
 
     return 0;
 }
