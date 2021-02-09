@@ -1,37 +1,24 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-// Procedural paradigm
-// Object oreinted paradigm
-
-// private
-// public
-// protected
-
 class Person{
     string name;
     int age;
     
     public:
+    static string species;
+
     Person(string n, int a){
         name = n;
         age = a;
     }
 
     void introduce(){
-        cout<<"Hi, my name is "<<name<<" and I am "<<age<<" years old"<<endl;
+        cout<<"Hi, my name is "<<name<<" and I am "<<age<<" years old and I am a "<<species<<endl;
     }
-
-    void is_adult();
 };
 
-void Person::is_adult(){
-    if(age>18){
-        cout<<"Person is adult"<<endl;
-    }else{
-        cout<<"Person is minor"<<endl;
-    }
-}
+string Person::species = "homo sapiens";
 
 int main(){
     Person *person1 = new Person("Kartavya",23);
@@ -41,12 +28,9 @@ int main(){
     // person1.age = 23;
 
     person1->introduce();
+    Person::species = "koala sapeins";
     person2->introduce();
     person3->introduce();
-
-    person1->is_adult();
-    person2->is_adult();
-    person3->is_adult();
     
     return 0;
 }
