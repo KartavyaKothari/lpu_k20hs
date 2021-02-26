@@ -5,14 +5,31 @@ class Person{
     public:
     string name;
     int age;
+
+    Person(){
+        name = "Kartavya";
+        age = 24;
+    }
+
+    Person(string n, int a){
+        name = n;
+        age = a;
+    }
+
+    void introduce(){
+        cout<<name<<" "<<age<<endl;
+    }
 };
 
 int main(){
     Person p;
-    p.name = "Kartavya";
-    p.age = 24;
-
     Person *ptr = &p;
-    cout<<ptr->name<<" "<<ptr->age;
+
+    p.introduce();
+    ptr->introduce();
+    
+    Person *ptr2 = new Person("Chirag",21);
+    ptr2->introduce();
+
     return 0;
 }
