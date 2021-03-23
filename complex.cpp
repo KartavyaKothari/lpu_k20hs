@@ -32,5 +32,8 @@ int main(){
     struct CN b = {3,4};
     //3+4i
 
+    // add(a,b)
+    // a+b
+
     return 0;
 }
