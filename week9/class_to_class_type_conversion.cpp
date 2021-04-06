@@ -42,6 +42,14 @@ class Imperial{
         inches = centimeters/2.5;
     }
 
+    operator Metric(){
+        Metric m(8000.23);        
+
+        cout<<"Converting imperial to metric";
+
+        return m;
+    }
+
     void display(){
         cout<<miles<<" miles, "<<feet<<" feet and "<<inches<<" inches"<<endl;
     }
@@ -57,6 +65,8 @@ int main(){
     Imperial i;
     i = m;
     i.display();
+
+    Metric m2 = (Metric) i;
 
     return 0;
 }
