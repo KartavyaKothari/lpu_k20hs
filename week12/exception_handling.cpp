@@ -10,6 +10,8 @@ int main(){
         if(b==0){
             string ERR = "Divide by zero is not possible, or is it? ...";
             throw ERR;
+            // throw "A string exception";
+            // throw 21;
         }else{
             cout<<a/b<<endl;
         }
